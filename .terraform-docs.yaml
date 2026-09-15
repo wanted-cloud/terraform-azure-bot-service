@@ -33,7 +33,7 @@ content: |-
 
   ```hcl
   module "example" {
-    source  = "wanted-cloud/..."
+    source  = "wanted-cloud/bot-service/azure"
     version = "x.y.z"
   }
   ```
@@ -44,6 +44,20 @@ content: |-
 
   ```hcl
   {{ include "./examples/base/main.tf" }}
+  ```
+
+  ### Bot with channels
+
+  Channels are optional objects, setting one creates the channel, leaving it at its `null` default does not:
+
+  ```hcl
+  {{ include "./examples/with-channels/main.tf" }}
+  ```
+
+  ### Bot with OAuth connections
+
+  ```hcl
+  {{ include "./examples/with-connections/main.tf" }}
   ```
   ## Contributing
 
